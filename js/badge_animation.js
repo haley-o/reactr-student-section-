@@ -115,6 +115,7 @@ console.log("scrollPercentage"+" "+scrollPercentage);
   }
  
 },false);
+
 //HEX SVG SCROLLING END
 
 //CIRCLE SVG SCROLLING BEGIN
