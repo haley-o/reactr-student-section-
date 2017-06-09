@@ -428,17 +428,17 @@ function spScroll(){
  //   (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
  // var scrollPercentage = .25;
-  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  // console.log("Scroll Top: body" + document.body.scrollTop);
-  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  // console.log("client height: doc ele" + document.documentElement.clientHeight);
-  var scrollPercentage4 = (document.documentElement.scrollTop + document.body.scrollTop)/
-  (document.documentElement.scrollTop + sectionS.offsetHeight);
+  console.log("Scroll Top: document element" + document.documentElement.scrollTop);
+  console.log("Scroll Top: body" + document.body.scrollTop);
+  console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
+  console.log("client height: doc ele" + document.documentElement.clientHeight);
+  var scrollPercentage4 = (document.body.scrollTop-5530)/((sectionS.offsetTop-50)-5530);
   
-  // console.log("section"+section1.offsetTop);
-  // console.log("section"+section1.offsetHeight);
+  console.log("sectionS offsetTop"+sectionS.offsetTop);
+  console.log("sectionS offsetHeight"+sectionS.offsetHeight);
+  // console.log("sectionS pageYOffset"+sectionS.pageYOffset);
 
- // console.log("SP scrollPercentage"+" "+scrollPercentage4);
+ console.log("SP scrollPercentage"+" "+scrollPercentage4);
   var drawLengthSp1 = lengthsp1 * scrollPercentage4;
   var drawLengthSp2 = lengthsp2 * scrollPercentage4;
   var drawLengthSp3 = lengthsp3 * scrollPercentage4;
