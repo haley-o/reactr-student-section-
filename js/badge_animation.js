@@ -3,6 +3,90 @@
 	"use strict";
 	console.log("badge_animation attached");
 
+//CIRCLE SVG SCROLLING BEGIN
+var cir1 = document.querySelector("#outsideCircle1");
+var cir2 = document.querySelector("#outsideCircle2");
+var cir3 = document.querySelector("#outsideCircle3");
+var cir4 = document.querySelector("#insideCircle");
+var cir5 = document.querySelector("#insideCircle2");
+
+
+var lengthcir1 = cir1.getTotalLength();
+var lengthcir2 = cir2.getTotalLength();
+var lengthcir3 = cir3.getTotalLength();
+var lengthcir4 = cir4.getTotalLength();
+var lengthcir5 = cir5.getTotalLength();
+
+var sectionFE = document.querySelector("#frontEnd");
+
+cir1.style.strokeDasharray = lengthcir1 + " " + lengthcir1;
+cir1.style.strokeDashoffset = lengthcir1;
+// console.log(lengthcir1);
+cir2.style.strokeDasharray = lengthcir2 + " " + lengthcir2;
+cir2.style.strokeDashoffset = lengthcir2;
+// console.log(lengthcir2);
+cir3.style.strokeDasharray = lengthcir3 + " " + lengthcir3;
+cir3.style.strokeDashoffset = lengthcir3;
+// console.log(lengthcir3);
+cir4.style.strokeDasharray = lengthcir4 + " " + lengthcir4;
+cir4.style.strokeDashoffset = lengthcir4;
+// console.log(lengthcir4);
+cir5.style.strokeDasharray = lengthcir5 + " " + lengthcir5;
+cir5.style.strokeDashoffset = lengthcir5;
+// console.log(lengthcir5);
+
+cir1.getBoundingClientRect();
+cir2.getBoundingClientRect();
+cir3.getBoundingClientRect();
+cir4.getBoundingClientRect();
+cir5.getBoundingClientRect();
+  
+  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
+  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
+  // console.log("client height: doc ele" + document.documentElement.clientHeight);
+  // console.log("sectionFE offset height"+sectionFE.offsetHeight); 
+ 
+window.addEventListener("scroll", function(e){
+  var scrollPercentage1 = (document.documentElement.scrollTop + document.body.scrollTop)/
+  (document.documentElement.scrollHeight + sectionFE.offsetTop);
+// console.log("Scroll Top: body" + document.body.scrollTop);
+// console.log("sectionFE:offsetTop"+sectionFE.offsetTop)
+// console.log("sectionFE:scrollTop"+sectionFE.scrollTop)
+
+// console.log("CIR scrollPercentage"+" "+scrollPercentage1);
+
+  var drawLengthCir1 = lengthcir1 * scrollPercentage1;
+  var drawLengthCir2 = lengthcir2 * scrollPercentage1;
+  var drawLengthCir3 = lengthcir3 * scrollPercentage1;
+  var drawLengthCir4 = lengthcir4 * scrollPercentage1;
+  var drawLengthCir5 = lengthcir5 * scrollPercentage1;
+  
+  cir1.style.strokeDashoffset = lengthcir1 - drawLengthCir1;
+  cir2.style.strokeDashoffset = lengthcir2 - drawLengthCir2;
+  cir3.style.strokeDashoffset = lengthcir3 - drawLengthCir3;
+  cir4.style.strokeDashoffset = lengthcir4 - drawLengthCir4;
+  cir5.style.strokeDashoffset = lengthcir5 - drawLengthCir5;
+
+  if (scrollPercentage1 >= 0.99) {
+    cir1.style.strokeDasharray = "none"; 
+    cir2.style.strokeDasharray = "none";
+    cir3.style.strokeDasharray = "none";
+    cir4.style.strokeDasharray = "none";
+    cir5.style.strokeDasharray = "none";
+    
+  } else {
+    cir1.style.strokeDasharray = lengthcir1 + ' ' + lengthcir1;
+    cir2.style.strokeDasharray = lengthcir2 + ' ' + lengthcir2;
+    cir3.style.strokeDasharray = lengthcir3 + ' ' + lengthcir3;
+    cir4.style.strokeDasharray = lengthcir4 + ' ' + lengthcir4;
+    cir5.style.strokeDasharray = lengthcir5 + ' ' + lengthcir5;
+    
+  }
+ 
+},false);
+//CIRCLE SVG SCROLLING END
+
+
 //HEX SVG SCROLLING BEGIN
 var hex1 = document.querySelector("#outside_hexes");
 var hex1OP = document.querySelector("#outside_hexesOP");
@@ -66,29 +150,29 @@ hex4.getBoundingClientRect();
   //   var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
   // (document.documentElement.scrollHeight + sectionBE.offsetHeight);
   
-  console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  console.log("client height: doc ele" + document.documentElement.clientHeight);
-  console.log("sectionBE offset height"+sectionBE.offsetHeight);
+  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
+  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
+  // console.log("client height: doc ele" + document.documentElement.clientHeight);
+  // console.log("sectionBE offset height"+sectionBE.offsetHeight);
   
  
   window.addEventListener("scroll", function(e){
-  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / 
+  var scrollPercentage2 = (document.documentElement.scrollTop + document.body.scrollTop) / 
   (document.documentElement.scrollHeight - sectionBE.offsetHeight);
 
-  console.log("Scroll Top: body" + document.body.scrollTop);
-  console.log("sectionBE:offsetTop"+sectionBE.offsetTop)
-  console.log("sectionBE:scrollTop"+sectionBE.scrollTop)
+//   console.log("Scroll Top: body" + document.body.scrollTop);
+//   console.log("sectionBE:offsetTop"+sectionBE.offsetTop)
+//   console.log("sectionBE:scrollTop"+sectionBE.scrollTop)
 
-console.log("scrollPercentage"+" "+scrollPercentage);
+// console.log("HEX scrollPercentage"+" "+scrollPercentage2);
 
-  var drawLength1 = length1 * scrollPercentage;
-  var drawLength1OP = length1OP * scrollPercentage;
-  var drawLength2 = length2 * scrollPercentage;
-  var drawLength2OP = length2OP * scrollPercentage;
-  var drawLength3 = length3 * scrollPercentage;
-  var drawLength3OP = length3OP * scrollPercentage;
-  var drawLength4 = length4 * scrollPercentage;
+  var drawLength1 = length1 * scrollPercentage2;
+  var drawLength1OP = length1OP * scrollPercentage2;
+  var drawLength2 = length2 * scrollPercentage2;
+  var drawLength2OP = length2OP * scrollPercentage2;
+  var drawLength3 = length3 * scrollPercentage2;
+  var drawLength3OP = length3OP * scrollPercentage2;
+  var drawLength4 = length4 * scrollPercentage2;
   hex1.style.strokeDashoffset = length1 - drawLength1;
   hex1OP.style.strokeDashoffset = length1OP - drawLength1OP;
   hex2.style.strokeDashoffset = length2 - drawLength2;
@@ -99,7 +183,7 @@ console.log("scrollPercentage"+" "+scrollPercentage);
 
 // TweenLite.to(drawLength1, 0.2,{ease:Elastic.easeOut});
 
-  if (scrollPercentage >= 0.99) {
+  if (scrollPercentage2 >= 0.99) {
     hex1.style.strokeDasharray = "none"; 
     hex1OP.style.strokeDasharray = "none";
     hex2.style.strokeDasharray = "none";
@@ -121,88 +205,7 @@ console.log("scrollPercentage"+" "+scrollPercentage);
 
 //HEX SVG SCROLLING END
 
-//CIRCLE SVG SCROLLING BEGIN
-var cir1 = document.querySelector("#outsideCircle1");
-var cir2 = document.querySelector("#outsideCircle2");
-var cir3 = document.querySelector("#outsideCircle3");
-var cir4 = document.querySelector("#insideCircle");
-var cir5 = document.querySelector("#insideCircle2");
 
-
-var lengthcir1 = cir1.getTotalLength();
-var lengthcir2 = cir2.getTotalLength();
-var lengthcir3 = cir3.getTotalLength();
-var lengthcir4 = cir4.getTotalLength();
-var lengthcir5 = cir5.getTotalLength();
-
-var sectionFE = document.querySelector("#frontEnd");
-
-cir1.style.strokeDasharray = lengthcir1 + " " + lengthcir1;
-cir1.style.strokeDashoffset = lengthcir1;
-// console.log(lengthcir1);
-cir2.style.strokeDasharray = lengthcir2 + " " + lengthcir2;
-cir2.style.strokeDashoffset = lengthcir2;
-// console.log(lengthcir2);
-cir3.style.strokeDasharray = lengthcir3 + " " + lengthcir3;
-cir3.style.strokeDashoffset = lengthcir3;
-// console.log(lengthcir3);
-cir4.style.strokeDasharray = lengthcir4 + " " + lengthcir4;
-cir4.style.strokeDashoffset = lengthcir4;
-// console.log(lengthcir4);
-cir5.style.strokeDasharray = lengthcir5 + " " + lengthcir5;
-cir5.style.strokeDashoffset = lengthcir5;
-// console.log(lengthcir5);
-
-cir1.getBoundingClientRect();
-cir2.getBoundingClientRect();
-cir3.getBoundingClientRect();
-cir4.getBoundingClientRect();
-cir5.getBoundingClientRect();
-  
-  console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  console.log("client height: doc ele" + document.documentElement.clientHeight);
-  console.log("sectionFE offset height"+sectionFE.offsetHeight); 
- 
-window.addEventListener("scroll", function(e){
-  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
-  (document.documentElement.scrollHeight + sectionFE.offsetTop);
-console.log("Scroll Top: body" + document.body.scrollTop);
-console.log("sectionFE:offsetTop"+sectionFE.offsetTop)
-console.log("sectionFE:scrollTop"+sectionFE.scrollTop)
-
-console.log("scrollPercentage"+" "+scrollPercentage);
-
-  var drawLengthCir1 = lengthcir1 * scrollPercentage;
-  var drawLengthCir2 = lengthcir2 * scrollPercentage;
-  var drawLengthCir3 = lengthcir3 * scrollPercentage;
-  var drawLengthCir4 = lengthcir4 * scrollPercentage;
-  var drawLengthCir5 = lengthcir5 * scrollPercentage;
-  
-  cir1.style.strokeDashoffset = lengthcir1 - drawLengthCir1;
-  cir2.style.strokeDashoffset = lengthcir2 - drawLengthCir2;
-  cir3.style.strokeDashoffset = lengthcir3 - drawLengthCir3;
-  cir4.style.strokeDashoffset = lengthcir4 - drawLengthCir4;
-  cir5.style.strokeDashoffset = lengthcir5 - drawLengthCir5;
-
-  if (scrollPercentage >= 0.99) {
-    cir1.style.strokeDasharray = "none"; 
-    cir2.style.strokeDasharray = "none";
-    cir3.style.strokeDasharray = "none";
-    cir4.style.strokeDasharray = "none";
-    cir5.style.strokeDasharray = "none";
-    
-  } else {
-    cir1.style.strokeDasharray = lengthcir1 + ' ' + lengthcir1;
-    cir2.style.strokeDasharray = lengthcir2 + ' ' + lengthcir2;
-    cir3.style.strokeDasharray = lengthcir3 + ' ' + lengthcir3;
-    cir4.style.strokeDasharray = lengthcir4 + ' ' + lengthcir4;
-    cir5.style.strokeDasharray = lengthcir5 + ' ' + lengthcir5;
-    
-  }
- 
-},false);
-//CIRCLE SVG SCROLLING END
 
 //TRIANGLE SVG SCROLLING BEGIN
 var tri1 = document.querySelector("#insideSpiral");
@@ -301,35 +304,35 @@ tri13.getBoundingClientRect();
 tri14.getBoundingClientRect();
 tri15.getBoundingClientRect();
   
-  console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  console.log("client height: doc ele" + document.documentElement.clientHeight);
-  console.log("sectionFE offset height"+sectionFE.offsetHeight); 
+  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
+  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
+  // console.log("client height: doc ele" + document.documentElement.clientHeight);
+  // console.log("sectionFE offset height"+sectionFE.offsetHeight); 
  
 window.addEventListener("scroll", function(e){
-  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
+  var scrollPercentage3 = (document.documentElement.scrollTop + document.body.scrollTop)/
   (document.documentElement.scrollHeight + sectionFE.offsetTop);
-console.log("Scroll Top: body" + document.body.scrollTop);
-console.log("sectionFE:offsetTop"+sectionFE.offsetTop)
-console.log("sectionFE:scrollTop"+sectionFE.scrollTop)
+// console.log("Scroll Top: body" + document.body.scrollTop);
+// console.log("sectionFE:offsetTop"+sectionFE.offsetTop)
+// console.log("sectionFE:scrollTop"+sectionFE.scrollTop)
 
-console.log("scrollPercentage"+" "+scrollPercentage);
+// console.log("TRI scrollPercentage"+" "+scrollPercentage3);
 
-  var drawLengthTri1 = lengthtri1 * scrollPercentage;
-  var drawLengthTri2 = lengthtri2 * scrollPercentage;
-  var drawLengthTri3 = lengthtri3 * scrollPercentage;
-  var drawLengthTri4 = lengthtri4 * scrollPercentage;
-  var drawLengthTri5 = lengthtri5 * scrollPercentage;
-  var drawLengthTri6 = lengthtri6 * scrollPercentage;
-  var drawLengthTri7 = lengthtri7 * scrollPercentage;
-  var drawLengthTri8 = lengthtri8 * scrollPercentage;
-  var drawLengthTri9 = lengthtri9 * scrollPercentage;
-  var drawLengthTri10 = lengthtri10 * scrollPercentage;
-  var drawLengthTri11 = lengthtri11 * scrollPercentage;
-  var drawLengthTri12 = lengthtri12 * scrollPercentage;
-  var drawLengthTri13 = lengthtri13 * scrollPercentage;
-  var drawLengthTri14 = lengthtri14 * scrollPercentage;
-  var drawLengthTri15 = lengthtri15 * scrollPercentage;
+  var drawLengthTri1 = lengthtri1 * scrollPercentage3;
+  var drawLengthTri2 = lengthtri2 * scrollPercentage3;
+  var drawLengthTri3 = lengthtri3 * scrollPercentage3;
+  var drawLengthTri4 = lengthtri4 * scrollPercentage3;
+  var drawLengthTri5 = lengthtri5 * scrollPercentage3;
+  var drawLengthTri6 = lengthtri6 * scrollPercentage3;
+  var drawLengthTri7 = lengthtri7 * scrollPercentage3;
+  var drawLengthTri8 = lengthtri8 * scrollPercentage3;
+  var drawLengthTri9 = lengthtri9 * scrollPercentage3;
+  var drawLengthTri10 = lengthtri10 * scrollPercentage3;
+  var drawLengthTri11 = lengthtri11 * scrollPercentage3;
+  var drawLengthTri12 = lengthtri12 * scrollPercentage3;
+  var drawLengthTri13 = lengthtri13 * scrollPercentage3;
+  var drawLengthTri14 = lengthtri14 * scrollPercentage3;
+  var drawLengthTri15 = lengthtri15 * scrollPercentage3;
   
   tri1.style.strokeDashoffset = lengthtri1 - drawLengthTri1;
   tri2.style.strokeDashoffset = lengthtri2 - drawLengthTri2;
@@ -347,7 +350,7 @@ console.log("scrollPercentage"+" "+scrollPercentage);
   tri14.style.strokeDashoffset = lengthtri14 - drawLengthTri14;
   tri15.style.strokeDashoffset = lengthtri15 - drawLengthTri15;
 
-  if (scrollPercentage >= 0.99) {
+  if (scrollPercentage3 >= 0.99) {
     tri1.style.strokeDasharray = "none"; 
     tri2.style.strokeDasharray = "none";
     tri3.style.strokeDasharray = "none";
@@ -386,5 +389,80 @@ console.log("scrollPercentage"+" "+scrollPercentage);
 },false);
 //TRIANGLE SVG SCROLLING END
 
+
+//SPIRAL SVG SCROLLING BEGIN
+var sp1 = document.querySelector("#spiral1");
+var sp2 = document.querySelector("#spiral2");
+var sp3 = document.querySelector("#outside1");
+var sp4 = document.querySelector("#outside2");
+
+// console.log(sp1,sp2,sp3,sp4);
+
+var lengthsp1 = sp1.getTotalLength();
+var lengthsp2 = sp2.getTotalLength();
+var lengthsp3 = sp3.getTotalLength();
+var lengthsp4 = sp4.getTotalLength();
+
+sp1.style.strokeDasharray = lengthsp1 + " " + lengthsp1;
+sp1.style.strokeDashoffset = lengthsp1;
+// console.log(lengthsp1);
+sp2.style.strokeDasharray = lengthsp2 + " " + lengthsp2;
+sp2.style.strokeDashoffset = lengthsp2;
+// console.log(lengthsp2);
+sp3.style.strokeDasharray = lengthsp3 + " " + lengthsp3;
+sp3.style.strokeDashoffset = lengthsp3;
+// console.log(lengthsp3);
+sp4.style.strokeDasharray = lengthsp4 + " " + lengthsp4;
+sp4.style.strokeDashoffset = lengthsp4;
+// console.log(lengthsp4);
+
+sp1.getBoundingClientRect();
+sp2.getBoundingClientRect();
+sp3.getBoundingClientRect();
+sp4.getBoundingClientRect();
+
+var sectionS = document.querySelector("#skills");
+
+function spScroll(){
+  // var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / 
+ //   (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+
+ // var scrollPercentage = .25;
+  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
+  // console.log("Scroll Top: body" + document.body.scrollTop);
+  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
+  // console.log("client height: doc ele" + document.documentElement.clientHeight);
+  var scrollPercentage4 = (document.documentElement.scrollTop + document.body.scrollTop)/
+  (document.documentElement.scrollTop + sectionS.offsetHeight);
+  
+  // console.log("section"+section1.offsetTop);
+  // console.log("section"+section1.offsetHeight);
+
+ // console.log("SP scrollPercentage"+" "+scrollPercentage4);
+  var drawLengthSp1 = lengthsp1 * scrollPercentage4;
+  var drawLengthSp2 = lengthsp2 * scrollPercentage4;
+  var drawLengthSp3 = lengthsp3 * scrollPercentage4;
+  var drawLengthSp4 = lengthsp4 * scrollPercentage4;
+  sp1.style.strokeDashoffset = lengthsp1 - drawLengthSp1;
+  sp2.style.strokeDashoffset = lengthsp2 - drawLengthSp2;
+  sp3.style.strokeDashoffset = lengthsp3 - drawLengthSp3;
+  sp4.style.strokeDashoffset = lengthsp4 - drawLengthSp4;
+
+  if (scrollPercentage4 >= 0.99) {
+    sp1.style.strokeDasharray = "none"; 
+    sp2.style.strokeDasharray = "none";
+    sp3.style.strokeDasharray = "none";
+    sp4.style.strokeDasharray = "none";
+  } else {
+    sp1.style.strokeDasharray = lengthsp1 + ' ' + lengthsp1;
+    sp2.style.strokeDasharray = lengthsp2 + ' ' + lengthsp2;
+    sp3.style.strokeDasharray = lengthsp3 + ' ' + lengthsp3;
+    sp4.style.strokeDasharray = lengthsp4 + ' ' + lengthsp4;
+  }
+ 
+};
+
+window.addEventListener("scroll", spScroll, false); 
+//SPIRAL SVG SCROLLING END
 
 })();
