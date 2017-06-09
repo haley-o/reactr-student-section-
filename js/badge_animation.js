@@ -30,25 +30,25 @@ var sectionBE = document.querySelector("#backEnd");
 
 hex1.style.strokeDasharray = length1 + " " + length1;
 hex1.style.strokeDashoffset = length1;
-console.log(length1);
+// console.log(length1);
 hex1OP.style.strokeDasharray = length1OP + " " + length1OP;
 hex1OP.style.strokeDashoffset = length1OP;
-console.log(length1OP);
+// console.log(length1OP);
 hex2.style.strokeDasharray = length2 + " " + length2;
 hex2.style.strokeDashoffset = length2;
-console.log(length2);
+// console.log(length2);
 hex2OP.style.strokeDasharray = length2OP + " " + length2OP;
 hex2OP.style.strokeDashoffset = length2OP;
-console.log(length2OP);
+// console.log(length2OP);
 hex3.style.strokeDasharray = length3 + " " + length3;
 hex3.style.strokeDashoffset = length3;
-console.log(length3);
+// console.log(length3);
 hex3OP.style.strokeDasharray = length3OP + " " + length3OP;
 hex3OP.style.strokeDashoffset = length3OP;
-console.log(length3OP);
+// console.log(length3OP);
 hex4.style.strokeDasharray = length4 + " " + length4;
 hex4.style.strokeDashoffset = length4;
-console.log(length4);
+// console.log(length4);
 
 hex1.getBoundingClientRect();
 hex1OP.getBoundingClientRect();
@@ -63,6 +63,8 @@ hex4.getBoundingClientRect();
  // var scrollPercentage = .25;
  // var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
  //  (document.documentElement.scrollHeight + sectionBE.offsetHeight);
+  //   var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
+  // (document.documentElement.scrollHeight + sectionBE.offsetHeight);
   
   console.log("Scroll Top: document element" + document.documentElement.scrollTop);
   console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
@@ -71,8 +73,9 @@ hex4.getBoundingClientRect();
   
  
   window.addEventListener("scroll", function(e){
-  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
-  (document.documentElement.scrollHeight + sectionBE.offsetTop);
+  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / 
+  (document.documentElement.scrollHeight - sectionBE.offsetHeight);
+
   console.log("Scroll Top: body" + document.body.scrollTop);
   console.log("sectionBE:offsetTop"+sectionBE.offsetTop)
   console.log("sectionBE:scrollTop"+sectionBE.scrollTop)
@@ -125,6 +128,7 @@ var cir3 = document.querySelector("#outsideCircle3");
 var cir4 = document.querySelector("#insideCircle");
 var cir5 = document.querySelector("#insideCircle2");
 
+
 var lengthcir1 = cir1.getTotalLength();
 var lengthcir2 = cir2.getTotalLength();
 var lengthcir3 = cir3.getTotalLength();
@@ -135,19 +139,19 @@ var sectionFE = document.querySelector("#frontEnd");
 
 cir1.style.strokeDasharray = lengthcir1 + " " + lengthcir1;
 cir1.style.strokeDashoffset = lengthcir1;
-console.log(lengthcir1);
+// console.log(lengthcir1);
 cir2.style.strokeDasharray = lengthcir2 + " " + lengthcir2;
 cir2.style.strokeDashoffset = lengthcir2;
-console.log(lengthcir2);
+// console.log(lengthcir2);
 cir3.style.strokeDasharray = lengthcir3 + " " + lengthcir3;
 cir3.style.strokeDashoffset = lengthcir3;
-console.log(lengthcir3);
+// console.log(lengthcir3);
 cir4.style.strokeDasharray = lengthcir4 + " " + lengthcir4;
 cir4.style.strokeDashoffset = lengthcir4;
-console.log(lengthcir4);
+// console.log(lengthcir4);
 cir5.style.strokeDasharray = lengthcir5 + " " + lengthcir5;
 cir5.style.strokeDashoffset = lengthcir5;
-console.log(lengthcir5);
+// console.log(lengthcir5);
 
 cir1.getBoundingClientRect();
 cir2.getBoundingClientRect();
@@ -237,49 +241,49 @@ var sectionWS = document.querySelector("#workStudy");
 
 tri1.style.strokeDasharray = lengthtri1 + " " + lengthtri1;
 tri1.style.strokeDashoffset = lengthtri1;
-console.log(lengthtri1);
+// console.log(lengthtri1);
 tri2.style.strokeDasharray = lengthtri2 + " " + lengthtri2;
 tri2.style.strokeDashoffset = lengthtri2;
-console.log(lengthtri2);
+// console.log(lengthtri2);
 tri3.style.strokeDasharray = lengthtri3 + " " + lengthtri3;
 tri3.style.strokeDashoffset = lengthtri3;
-console.log(lengthtri3);
+// console.log(lengthtri3);
 tri4.style.strokeDasharray = lengthtri4 + " " + lengthtri4;
 tri4.style.strokeDashoffset = lengthtri4;
-console.log(lengthtri4);
+// console.log(lengthtri4);
 tri5.style.strokeDasharray = lengthtri5 + " " + lengthtri5;
 tri5.style.strokeDashoffset = lengthtri5;
-console.log(lengthtri5);
+// console.log(lengthtri5);
 tri6.style.strokeDasharray = lengthtri6 + " " + lengthtri6;
 tri6.style.strokeDashoffset = lengthtri6;
-console.log(lengthtri6);
+// console.log(lengthtri6);
 tri7.style.strokeDasharray = lengthtri7 + " " + lengthtri7;
 tri7.style.strokeDashoffset = lengthtri7;
-console.log(lengthtri7);
+// console.log(lengthtri7);
 tri8.style.strokeDasharray = lengthtri8 + " " + lengthtri8;
 tri8.style.strokeDashoffset = lengthtri8;
-console.log(lengthtri8);
+// console.log(lengthtri8);
 tri9.style.strokeDasharray = lengthtri9 + " " + lengthtri9;
 tri9.style.strokeDashoffset = lengthtri9;
-console.log(lengthtri9);
+// console.log(lengthtri9);
 tri10.style.strokeDasharray = lengthtri10 + " " + lengthtri10;
 tri10.style.strokeDashoffset = lengthtri10;
-console.log(lengthtri10);
+// console.log(lengthtri10);
 tri11.style.strokeDasharray = lengthtri11 + " " + lengthtri11;
 tri11.style.strokeDashoffset = lengthtri11;
-console.log(lengthtri11);
+// console.log(lengthtri11);
 tri12.style.strokeDasharray = lengthtri12 + " " + lengthtri12;
 tri12.style.strokeDashoffset = lengthtri12;
-console.log(lengthtri12);
+// console.log(lengthtri12);
 tri13.style.strokeDasharray = lengthtri13 + " " + lengthtri13;
 tri13.style.strokeDashoffset = lengthtri13;
-console.log(lengthtri13);
+// console.log(lengthtri13);
 tri14.style.strokeDasharray = lengthtri14 + " " + lengthtri14;
 tri14.style.strokeDashoffset = lengthtri14;
-console.log(lengthtri14);
+// console.log(lengthtri14);
 tri15.style.strokeDasharray = lengthtri15 + " " + lengthtri15;
 tri15.style.strokeDashoffset = lengthtri15;
-console.log(lengthtri15);
+// console.log(lengthtri15);
 
 tri1.getBoundingClientRect();
 tri2.getBoundingClientRect();
