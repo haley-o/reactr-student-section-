@@ -47,8 +47,7 @@ cir5.getBoundingClientRect();
   // console.log("sectionFE offset height"+sectionFE.offsetHeight); 
  
 window.addEventListener("scroll", function(e){
-  var scrollPercentage1 = (document.documentElement.scrollTop + document.body.scrollTop)/
-  (document.documentElement.scrollHeight + sectionFE.offsetTop);
+  var scrollPercentage1 = (document.body.scrollTop-3097)/((sectionFE.offsetTop-50)-3097);
 // console.log("Scroll Top: body" + document.body.scrollTop);
 // console.log("sectionFE:offsetTop"+sectionFE.offsetTop)
 // console.log("sectionFE:scrollTop"+sectionFE.scrollTop)
@@ -141,28 +140,15 @@ hex2OP.getBoundingClientRect();
 hex3.getBoundingClientRect();
 hex3OP.getBoundingClientRect();
 hex4.getBoundingClientRect();
-
-	// var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / 
- // 	(document.documentElement.scrollHeight - document.documentElement.clientHeight);
- // var scrollPercentage = .25;
- // var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
- //  (document.documentElement.scrollHeight + sectionBE.offsetHeight);
-  //   var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/
-  // (document.documentElement.scrollHeight + sectionBE.offsetHeight);
-  
-  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  // console.log("client height: doc ele" + document.documentElement.clientHeight);
-  // console.log("sectionBE offset height"+sectionBE.offsetHeight);
-  
  
   window.addEventListener("scroll", function(e){
-  var scrollPercentage2 = (document.documentElement.scrollTop + document.body.scrollTop) / 
-  (document.documentElement.scrollHeight - sectionBE.offsetHeight);
+  var scrollPercentage2 = (document.body.scrollTop-3967) / ((sectionBE.offsetTop-50)-3967);
 
-//   console.log("Scroll Top: body" + document.body.scrollTop);
-//   console.log("sectionBE:offsetTop"+sectionBE.offsetTop)
-//   console.log("sectionBE:scrollTop"+sectionBE.scrollTop)
+ // console.log("Scroll Top: body" + document.body.scrollTop);
+ //  console.log("sectionS offsetTop"+sectionFE.offsetTop);
+
+  // var scrollPercentage4 = (document.body.scrollTop-5530)/((sectionS.offsetTop-50)-5530);
+
 
 // console.log("HEX scrollPercentage"+" "+scrollPercentage2);
 
@@ -310,13 +296,14 @@ tri15.getBoundingClientRect();
   // console.log("sectionFE offset height"+sectionFE.offsetHeight); 
  
 window.addEventListener("scroll", function(e){
-  var scrollPercentage3 = (document.documentElement.scrollTop + document.body.scrollTop)/
-  (document.documentElement.scrollHeight + sectionFE.offsetTop);
-// console.log("Scroll Top: body" + document.body.scrollTop);
-// console.log("sectionFE:offsetTop"+sectionFE.offsetTop)
-// console.log("sectionFE:scrollTop"+sectionFE.scrollTop)
+  var scrollPercentage3 = (document.body.scrollTop-4800)/((sectionFE.offsetTop-50)-4800);
 
-// console.log("TRI scrollPercentage"+" "+scrollPercentage3);
+  console.log("Scroll Top: body" + document.body.scrollTop);
+  console.log("sectionS offsetTop"+sectionFE.offsetTop);
+
+  // var scrollPercentage4 = (document.body.scrollTop-5530)/((sectionS.offsetTop-50)-5530);
+  
+console.log("TRI scrollPercentage"+" "+scrollPercentage3);
 
   var drawLengthTri1 = lengthtri1 * scrollPercentage3;
   var drawLengthTri2 = lengthtri2 * scrollPercentage3;
@@ -428,17 +415,17 @@ function spScroll(){
  //   (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
  // var scrollPercentage = .25;
-  console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  console.log("Scroll Top: body" + document.body.scrollTop);
-  console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  console.log("client height: doc ele" + document.documentElement.clientHeight);
+  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
+  // console.log("Scroll Top: body" + document.body.scrollTop);
+  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
+  // console.log("client height: doc ele" + document.documentElement.clientHeight);
   var scrollPercentage4 = (document.body.scrollTop-5530)/((sectionS.offsetTop-50)-5530);
   
-  console.log("sectionS offsetTop"+sectionS.offsetTop);
-  console.log("sectionS offsetHeight"+sectionS.offsetHeight);
-  // console.log("sectionS pageYOffset"+sectionS.pageYOffset);
+ //  console.log("sectionS offsetTop"+sectionS.offsetTop);
+ //  console.log("sectionS offsetHeight"+sectionS.offsetHeight);
+ //  // console.log("sectionS pageYOffset"+sectionS.pageYOffset);
 
- console.log("SP scrollPercentage"+" "+scrollPercentage4);
+ // console.log("SP scrollPercentage"+" "+scrollPercentage4);
   var drawLengthSp1 = lengthsp1 * scrollPercentage4;
   var drawLengthSp2 = lengthsp2 * scrollPercentage4;
   var drawLengthSp3 = lengthsp3 * scrollPercentage4;
