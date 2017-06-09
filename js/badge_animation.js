@@ -40,19 +40,9 @@ cir2.getBoundingClientRect();
 cir3.getBoundingClientRect();
 cir4.getBoundingClientRect();
 cir5.getBoundingClientRect();
-  
-  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  // console.log("client height: doc ele" + document.documentElement.clientHeight);
-  // console.log("sectionFE offset height"+sectionFE.offsetHeight); 
- 
-window.addEventListener("scroll", function(e){
-  var scrollPercentage1 = (document.body.scrollTop-3097)/((sectionFE.offsetTop-50)-3097);
-// console.log("Scroll Top: body" + document.body.scrollTop);
-// console.log("sectionFE:offsetTop"+sectionFE.offsetTop)
-// console.log("sectionFE:scrollTop"+sectionFE.scrollTop)
 
-// console.log("CIR scrollPercentage"+" "+scrollPercentage1);
+function cirScroll(){
+  var scrollPercentage1 = (document.body.scrollTop-3097)/((sectionFE.offsetTop-50)-3097);
 
   var drawLengthCir1 = lengthcir1 * scrollPercentage1;
   var drawLengthCir2 = lengthcir2 * scrollPercentage1;
@@ -82,7 +72,9 @@ window.addEventListener("scroll", function(e){
     
   }
  
-},false);
+}
+ 
+window.addEventListener("scroll", cirScroll,false);
 //CIRCLE SVG SCROLLING END
 
 
@@ -105,11 +97,6 @@ var length3OP = hex3OP.getTotalLength();
 var length4 = hex4.getTotalLength();
 
 var sectionBE = document.querySelector("#backEnd");
-
-
-// var ypos = window.pageYOffset;
-// var eleypos = sectionBE.pageYOffset;
-// console.log("eleypos"+eleypos);
 
 hex1.style.strokeDasharray = length1 + " " + length1;
 hex1.style.strokeDashoffset = length1;
@@ -140,17 +127,9 @@ hex2OP.getBoundingClientRect();
 hex3.getBoundingClientRect();
 hex3OP.getBoundingClientRect();
 hex4.getBoundingClientRect();
- 
-  window.addEventListener("scroll", function(e){
+
+function hexScroll(){
   var scrollPercentage2 = (document.body.scrollTop-3967) / ((sectionBE.offsetTop-50)-3967);
-
- // console.log("Scroll Top: body" + document.body.scrollTop);
- //  console.log("sectionS offsetTop"+sectionFE.offsetTop);
-
-  // var scrollPercentage4 = (document.body.scrollTop-5530)/((sectionS.offsetTop-50)-5530);
-
-
-// console.log("HEX scrollPercentage"+" "+scrollPercentage2);
 
   var drawLength1 = length1 * scrollPercentage2;
   var drawLength1OP = length1OP * scrollPercentage2;
@@ -166,8 +145,6 @@ hex4.getBoundingClientRect();
   hex3.style.strokeDashoffset = length3 - drawLength3;
   hex3OP.style.strokeDashoffset = length3OP - drawLength3OP;
   hex4.style.strokeDashoffset = length4 - drawLength4;
-
-// TweenLite.to(drawLength1, 0.2,{ease:Elastic.easeOut});
 
   if (scrollPercentage2 >= 0.99) {
     hex1.style.strokeDasharray = "none"; 
@@ -187,7 +164,9 @@ hex4.getBoundingClientRect();
     hex4.style.strokeDasharray = length4 + ' ' + length4;
   }
  
-},false);
+}
+ 
+  window.addEventListener("scroll", hexScroll,false);
 
 //HEX SVG SCROLLING END
 
@@ -289,21 +268,9 @@ tri12.getBoundingClientRect();
 tri13.getBoundingClientRect();
 tri14.getBoundingClientRect();
 tri15.getBoundingClientRect();
-  
-  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  // console.log("client height: doc ele" + document.documentElement.clientHeight);
-  // console.log("sectionFE offset height"+sectionFE.offsetHeight); 
- 
-window.addEventListener("scroll", function(e){
+
+function triScroll(){
   var scrollPercentage3 = (document.body.scrollTop-4800)/((sectionFE.offsetTop-50)-4800);
-
-  console.log("Scroll Top: body" + document.body.scrollTop);
-  console.log("sectionS offsetTop"+sectionFE.offsetTop);
-
-  // var scrollPercentage4 = (document.body.scrollTop-5530)/((sectionS.offsetTop-50)-5530);
-  
-console.log("TRI scrollPercentage"+" "+scrollPercentage3);
 
   var drawLengthTri1 = lengthtri1 * scrollPercentage3;
   var drawLengthTri2 = lengthtri2 * scrollPercentage3;
@@ -373,7 +340,9 @@ console.log("TRI scrollPercentage"+" "+scrollPercentage3);
     
   }
  
-},false);
+}
+ 
+window.addEventListener("scroll", triScroll,false);
 //TRIANGLE SVG SCROLLING END
 
 
@@ -383,12 +352,12 @@ var sp2 = document.querySelector("#spiral2");
 var sp3 = document.querySelector("#outside1");
 var sp4 = document.querySelector("#outside2");
 
-// console.log(sp1,sp2,sp3,sp4);
-
 var lengthsp1 = sp1.getTotalLength();
 var lengthsp2 = sp2.getTotalLength();
 var lengthsp3 = sp3.getTotalLength();
 var lengthsp4 = sp4.getTotalLength();
+
+var sectionS = document.querySelector("#skills");
 
 sp1.style.strokeDasharray = lengthsp1 + " " + lengthsp1;
 sp1.style.strokeDashoffset = lengthsp1;
@@ -408,24 +377,9 @@ sp2.getBoundingClientRect();
 sp3.getBoundingClientRect();
 sp4.getBoundingClientRect();
 
-var sectionS = document.querySelector("#skills");
-
 function spScroll(){
-  // var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / 
- //   (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
- // var scrollPercentage = .25;
-  // console.log("Scroll Top: document element" + document.documentElement.scrollTop);
-  // console.log("Scroll Top: body" + document.body.scrollTop);
-  // console.log("Scroll height: doc ele" + document.documentElement.scrollHeight);
-  // console.log("client height: doc ele" + document.documentElement.clientHeight);
   var scrollPercentage4 = (document.body.scrollTop-5530)/((sectionS.offsetTop-50)-5530);
   
- //  console.log("sectionS offsetTop"+sectionS.offsetTop);
- //  console.log("sectionS offsetHeight"+sectionS.offsetHeight);
- //  // console.log("sectionS pageYOffset"+sectionS.pageYOffset);
-
- // console.log("SP scrollPercentage"+" "+scrollPercentage4);
   var drawLengthSp1 = lengthsp1 * scrollPercentage4;
   var drawLengthSp2 = lengthsp2 * scrollPercentage4;
   var drawLengthSp3 = lengthsp3 * scrollPercentage4;
