@@ -1,0 +1,378 @@
+@media screen and (min-width: 71.25em){
+	/*This is my header/home*/
+
+.boxHelper
+{
+	color: #fff;
+	background-color: #000;
+	text-align: center;
+}
+
+body
+{
+	background-color: white;
+}
+
+h1
+{
+	font-size: 40px;
+	font-weight: 600;
+	color: #4a5c5a;
+	font-family: 'Montserrat', sans-serif, times;
+}
+
+h2
+{
+	font-size: 18px;
+	font-weight: 600;
+	color: #4a5c5a;
+	font-family: 'Montserrat', sans-serif, times;
+}
+
+p 
+{
+	font-size: 16px;
+	font-weight: 300;
+	color: #4a5c5a;
+	font-family: 'Montserrat', sans-serif, times;
+}
+
+ul
+{
+	font-size: 16px;
+	line-height: 35px;
+	font-weight: 300;
+	color: #4a5c5a;
+	font-family: 'Montserrat', sans-serif, times;
+}
+
+
+/*This is the Header*/
+
+#headerImg
+{
+	background-image:url('../images/header_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+#headTitle
+{
+	color: white;
+	font-family: 'Montserrat', sans-serif, times;
+	font-weight: 600;
+	margin-top: 840px;
+	font-size: 40px;
+}
+
+#mainSection
+{
+	margin-top: 100px;
+}
+
+.projectDesc 
+{
+	text-align: left;
+}
+
+.projectImg{
+  width: auto;
+  max-width: 420px;
+  height: auto;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+#studentDesc
+{
+	text-align: center;
+	/*margin-bottom: 100px;*/
+}
+
+#first_project
+{
+	margin-top: 100px;
+}
+
+#project_title
+{
+	margin-top: 0;
+	float: right;
+}
+
+#second_project
+{
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+
+#third_project
+{
+	margin-bottom: 100px;
+}
+
+/*Header End*/
+
+/*This is the Job Positions*/
+#positionHeadImg
+{
+	background-image:url('../images/position_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+#frontEnd h1, p
+{
+	text-align: center;
+}
+
+#backEnd h1, p 
+{
+	text-align: center;
+}
+
+#workStudy h1, p 
+{
+	text-align: center;
+}
+
+.badge
+{
+	margin-top: 95px;
+	margin-bottom: 100px;
+}
+
+#skillsText
+{
+	float: left;
+	clear: both;
+}
+
+#skillsPoints
+{
+	float: left;
+	clear: both;
+}
+
+#skillSection
+{
+	margin-left: 170px;
+}
+
+/*This is the Form*/
+
+#formHeadImg
+{
+	background-image:url('../images/form_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+label
+{
+	font-size: 18px;
+	font-weight: 300;
+	color: #4a5c5a;
+	font-family: 'Montserrat', sans-serif, times;
+}
+
+input
+{
+	width: 100%;
+	height: 40px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+
+input, label 
+{
+	display: block;
+}
+
+#inputCon { 
+	width:600px; 
+	height:725px; 
+	/*background-color:grey; */
+	margin:0 auto; 
+	overflow:hidden;
+	padding-top: 45px; 
+}
+
+.progressText
+{
+	font-weight: 400;
+}
+
+#progressBar {
+  list-style: none;
+  display: inline-block;
+  /*margin: 0 auto;*/
+  margin-left: 25%;
+}
+
+#progressBar li {
+  float: left;
+}
+#progressBar li a {
+  color: #FFF;
+  display: block;
+  background: #4a5c5a;
+  text-decoration: none;
+  position: relative;
+  height: 40px;
+  width: 200px;
+  line-height: 40px;
+  padding: 0 10px 0 5px;
+  text-align: center;
+  margin-right: 23px;
+}
+#progressBar li:nth-child(even) a {
+  background-color: #c7c7c7;
+}
+#progressBar li:nth-child(even) a:before {
+  border-color: #c7c7c7;
+  border-left-color: transparent;
+}
+#progressBar li:nth-child(even) a:after {
+  border-left-color: #c7c7c7;
+}
+#progressBar li:first-child a {
+  padding-left: 15px;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 18px 0 0 18px;
+}
+#progressBar li:first-child a:before {
+  border: none;
+}
+#progressBar li:last-child a {
+  padding-right: 15px;
+  -moz-border-radius: 0 4px 4px 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 18px 18px 0;
+}
+#progressBar li:last-child a:after {
+  border: none;
+}
+#progressBar li a:before, #progressBar li a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #4a5c5a;
+  border-width: 20px 10px;
+  width: 0;
+  height: 0;
+}
+#progressBar li a:before {
+  left: -20px;
+  border-left-color: transparent;
+}
+#progressBar li a:after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #4a5c5a;
+}
+
+
+#nextButton
+{
+	float: right;
+	clear: both;
+	margin-right: 250px;
+	margin-top: 100px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #4a5c5a;
+	font-family: 'Montserrat', sans-serif, times;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#applicationForm h1 {
+	text-align: center;
+}
+
+.slide.showing
+{
+	/*z-index: 2;*/
+	background-color: white;
+	/*height: 800px;*/
+}
+
+.slide
+{
+	position: absolute;
+	width: 100%;
+	background-color: white;
+	top: 0;
+	bottom: 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.slide:nth-child(1) {
+	left: -100%;
+}
+
+.slide:nth-child(2) {
+	left: 100%;
+}
+
+.slide:nth-child(1).showing, .slide:nth-child(2).showing {
+	left: 0;
+}
+
+.slider
+{
+	position: relative;
+	/*float: left;*/
+	height: 685px;
+	overflow: hidden;
+	/*margin-bottom: 200px;*/
+}
+
+#submitButton
+{
+	visibility: hidden;
+	margin: 0 auto;
+	display: block;
+	float: none;
+	clear: left;
+	font-size: 14px;
+	font-weight: 600;
+	color: #4a5c5a;
+	font-family: 'Montserrat', sans-serif, times;
+	border-style: solid;
+	border-color: #acacac;
+	border-width: 1px;
+	height: 60px;
+	width: 500px;
+	margin-top: 65px;
+}
+
+#fileUpload
+{
+
+}
+
+/*#submitButton:hover{
+	cursor: pointer;
+}*/
+
+#footer
+{
+	background-color: #4a5c5a;
+	width: 100%;
+	height: 400px;
+	margin-top: 200px;
+}
+
+}
